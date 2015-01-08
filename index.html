@@ -1,0 +1,19 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <!-- using ng-app auto bootstraps the module. Only one module can be auto-bootstrapped per HTML document -->
+    <div ng-app="autoBootstrapApp">
+        root count : {{counter}}
+    </div>
+
+    <div id="countDisplay">
+        Bug Count : {{bugCount}}
+        Story Count: {{storyCount}}
+    </div>
+  </body>
+  <script src="angular.js"></script>
+  <script src="app.js"></script>
+</html>
