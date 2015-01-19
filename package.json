@@ -1,0 +1,18 @@
+{
+  "name": "testingApp",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "karma": "latest",
+    "jasmine-core": "latest",
+    "karma-jasmine": "latest",
+    "karma-phantomjs-launcher": "latest",
+    "karma-ng-html2js-preprocessor": "^0.1.2"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  }
+}

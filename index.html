@@ -4,16 +4,18 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <!-- using ng-app auto bootstraps the module. Only one module can be auto-bootstrapped per HTML document -->
-    <div ng-app="autoBootstrapApp">
-        root count : {{counter}}
-    </div>
-
-    <div id="countDisplay">
-        Bug Count : {{bugCount}}
-        Story Count: {{storyCount}}
+    <div ng-app="testingApp">
+        <div id="countDisplay" ng-controller="countDisplayController">
+            Bug Count : {{bugCount}}
+            Story Count: {{storyCount}}
+            <br>
+            <input id="nameInput" ng-model="name">
+            <button id="changeNameBtn" ng-click="changeName(name)">change name</button>
+            <div id="nameDiv">{{name}}</div>
+        </div>
     </div>
   </body>
-  <script src="angular.js"></script>
+  <script src="lib/jquery-2.1.3.js"></script>
+  <script src="lib/angular.js"></script>
   <script src="app.js"></script>
 </html>
