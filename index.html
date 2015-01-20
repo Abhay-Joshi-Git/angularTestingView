@@ -9,7 +9,15 @@
             Bug Count : {{bugCount}}
             Story Count: {{storyCount}}
             <br>
-            <input id="nameInput" ng-model="name">
+            <form name="testForm">
+                <input type="text" id="fNameInput" name="fName" ng-model="fName" required><div id="showDirt" ng-show="testForm.fName.$dirty">{{fName}}</div>
+                <input type="text" name="lName" ng-model="lName">
+                <button id="formSubmitBtn" ng-click="submit(testForm)" ng-disabled="testForm.$invalid">submit</button>
+            </form>
+            <!--
+            <input id="fNameInput" ng-model="fName"><div id="showDirt">{{fName}}</div>
+            -->
+            <input id="nameInput" ng-model="name" value="original">
             <button id="changeNameBtn" ng-click="changeName(name)">change name</button>
             <div id="nameDiv">{{name}}</div>
         </div>

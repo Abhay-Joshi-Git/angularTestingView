@@ -8,5 +8,9 @@ angular.module('testingApp', [])
     $scope.changeName = function(){
       console.log('changing name');
       $scope.name = 'changing now';
+      $scope.submit = function(form){
+        console.log('do nothing');
+
+      };
     }
   }]);

@@ -10,7 +10,6 @@ describe('count display controller', function(){
   beforeEach(inject(function($controller, $templateCache, $rootScope, $compile){
     scope = $rootScope.$new();
     var html = $templateCache.get('index.html');
-    console.log('html : ' + html);
     cntDisCntrl = $controller('countDisplayController', {
       $scope: scope
     });
@@ -34,9 +33,18 @@ describe('count display controller', function(){
 //    console.log('clicking change name btn');//
 //    view.find('#changeNameBtn').click();
 
-    console.log('controller div element - inner html : ' + view.find('#countDisplay').html());
     expect(divElement.html()).toBe('change');
+  });
 
+  it('validates form element and submit button', function(){
+    var showDirtEl =  view.find('#showDirt');
+    var formSubmitBtnEl = view.find('#formSubmitBtn');
+    console.log(" dirt shower has class ng-hide > " + showDirtEl.hasClass("ng-hide") + ', html >> '  + showDirtEl.html());
+    console.log(' btn disabled : ' + formSubmitBtnEl.attr('disabled'));
+    view.find('#fNameInput').val('change').trigger('input');
+    console.log('--- value has been changed  ---');
 
+    console.log(" dirt shower has class ng-hide > "+ showDirtEl.hasClass("ng-hide") + ', html >> '  + showDirtEl.html());
+    console.log(' btn disabled : ' + formSubmitBtnEl.attr('disabled'));
   });
 });
