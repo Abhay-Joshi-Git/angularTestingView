@@ -9,10 +9,10 @@
             Bug Count : {{bugCount}}
             Story Count: {{storyCount}}
             <br>
-            <form name="testForm">
+            <form name="testForm"  novalidate role="form">
                 <input type="text" id="fNameInput" name="fName" ng-model="fName" required><div id="showDirt" ng-show="testForm.fName.$dirty">{{fName}}</div>
                 <input type="text" name="lName" ng-model="lName">
-                <button id="formSubmitBtn" ng-click="submit(testForm)" ng-disabled="testForm.$invalid">submit</button>
+                <button  type="submit" id="formSubmitBtn" ng-click="submit(testForm)" ng-disabled="testForm.$invalid">submit</button>
             </form>
             <!--
             <input id="fNameInput" ng-model="fName"><div id="showDirt">{{fName}}</div>
